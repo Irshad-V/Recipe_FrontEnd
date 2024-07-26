@@ -1,0 +1,123 @@
+.recipeTable {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.tableHead{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+.userName{
+  font-weight: bold;
+  margin: 2rem;
+}
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.smallImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.ingredientList {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  th, td {
+      padding: 8px 10px;
+  }
+
+  .smallImage {
+      width: 40px;
+      height: 40px;
+  }
+
+  button {
+      padding: 3px 6px;
+      margin: 3px;
+  }
+}
+
+
+  @media (max-width: 480px) {
+    table {
+      width: 100%;
+      border: 0;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tr {
+      display: block;
+      margin-bottom: 20px;
+    }
+  
+    td {
+      display: block;
+      text-align: left;
+      font-size: 14px;
+      padding: 10px 5px;
+      position: relative;
+      border: 1px solid #ddd;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    .smallImage {
+      width: 100%;
+      height: auto;
+      max-width: 150px;
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .ingredientList {
+      padding-left: 15px;
+    }
+  
+    button {
+      display: inline-block;
+      width: 48%;
+      margin: 2px 1%;
+    }
+    .smallImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    
+}
